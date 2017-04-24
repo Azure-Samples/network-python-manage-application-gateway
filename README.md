@@ -6,8 +6,6 @@ author: lmazuel
 
 # Getting Started with Application Gateway in Python
 
-XXXXXXXXXXX
-
 **On this page**
 
 - [Run this sample](#run)
@@ -19,7 +17,7 @@ XXXXXXXXXXX
 
 1. If you don't already have it, [install Python](https://www.python.org/downloads/).
 
-2. We recommend using a [virtual environment](https://docs.python.org/3/tutorial/venv.html) to run this example, but it's not mandatory. You can initialize a virtual environment this way:
+2. Set up a [virtual environment](https://docs.python.org/3/tutorial/venv.html) to run this example. You can initialize a virtual environment this way:
 
     ```
     pip install virtualenv
@@ -31,22 +29,22 @@ XXXXXXXXXXX
 3. Clone the repository.
 
     ```
-    git clone https://github.com/Azure-Samples/network-pyhon-manage-application-gateway.git
+    git clone https://github.com/Azure-Samples/network-python-manager-application-gateway.git
     ```
 
 4. Install the dependencies using pip.
 
     ```
-    cd network-pyhon-manage-application-gateway
+    cd network-python-manager-application-gateway
     pip install -r requirements.txt
     ```
 
-5. Create an Azure service principal, using 
-[Azure CLI](http://azure.microsoft.com/documentation/articles/resource-group-authenticate-service-principal-cli/),
+5. Create an Azure service principal, using
+[Azure CLI](https://docs.microsoft.com/en-us/cli/azure/create-an-azure-service-principal-azure-cli?toc=%2fazure%2fazure-resource-manager%2ftoc.json),
 [PowerShell](http://azure.microsoft.com/documentation/articles/resource-group-authenticate-service-principal/)
 or [Azure Portal](http://azure.microsoft.com/documentation/articles/resource-group-create-service-principal-portal/).
 
-6. Export these environment variables into your current shell. 
+6. Export these environment variables into your current shell.
 
     ```
     export AZURE_TENANT_ID={your tenant id}
@@ -203,7 +201,7 @@ for usage in storage_client.usage.list().value:
 <a name="more-info"></a>
 ## More information
 
-- [Azure SDK for Python](http://github.com/Azure/azure-sdk-for-python) 
+- [Azure SDK for Python](http://github.com/Azure/azure-sdk-for-python)
 - [Azure Storage Documentation](https://azure.microsoft.com/services/storage/)
 
 
