@@ -18,6 +18,8 @@ APPLICATION_GATEWAY_NAME = 'AdatumAppGateway'
 # AZURE_CLIENT_SECRET: with your Azure Active Directory Application Secret
 # AZURE_SUBSCRIPTION_ID: with your Azure Subscription Id
 #
+
+
 def run_example():
     """Application Gateway example."""
     #
@@ -25,7 +27,7 @@ def run_example():
     #
     subscription_id = os.environ.get(
         'AZURE_SUBSCRIPTION_ID',
-        '11111111-1111-1111-1111-111111111111') # your Azure Subscription Id
+        '11111111-1111-1111-1111-111111111111')  # your Azure Subscription Id
     credentials = ServicePrincipalCredentials(
         client_id=os.environ['AZURE_CLIENT_ID'],
         secret=os.environ['AZURE_CLIENT_SECRET'],
@@ -40,8 +42,9 @@ def run_example():
 
     # Create Resource group
     print('Create Resource Group')
-    resource_group_params = {'location':LOCATION}
-    resource_group = resource_client.resource_groups.create_or_update(GROUP_NAME, resource_group_params)
+    resource_group_params = {'location': LOCATION}
+    resource_group = resource_client.resource_groups.create_or_update(
+        GROUP_NAME, resource_group_params)
     print_item(resource_group)
 
     # Create VNet
@@ -70,7 +73,8 @@ def run_example():
 
     # Create Application Gateway
     print('\nCreate Application Gateway')
-    appgateway_id = resource_group.id + '/providers/Microsoft.Network/applicationGateways/' + APPLICATION_GATEWAY_NAME
+    appgateway_id = resource_group.id + \
+        '/providers/Microsoft.Network/applicationGateways/' + APPLICATION_GATEWAY_NAME
     appgateway_frontip_name = "appGatewayFrontendIP"
     appgateway_frontport_name = "appGatewayFrontendPort"
     appgateway_http_listener_name = "appGatewayHttpListener"
@@ -162,12 +166,14 @@ def print_item(group):
     if hasattr(group, 'properties'):
         print_properties(group.properties)
 
+
 def print_properties(props):
     """Print a ResourceGroup properties instance."""
     if props and props.provisioning_state:
         print("\tProperties:")
         print("\t\tProvisioning State: {}".format(props.provisioning_state))
     print("\n\n")
+
 
 if __name__ == "__main__":
     run_example()
