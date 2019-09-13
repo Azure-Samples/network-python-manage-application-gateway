@@ -1,7 +1,11 @@
 ---
-services: storage
-platforms: python
-author: lmazuel
+page_type: sample
+languages:
+- python
+products:
+- azure
+description: "Getting Started with Application Gateway in Python"
+urlFragment: network-python-manage-application-gateway
 ---
 
 # Getting Started with Application Gateway in Python
