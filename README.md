@@ -22,7 +22,7 @@ urlFragment: network-python-manage-application-gateway
 
 2. Set up a [virtual environment](https://docs.python.org/3/tutorial/venv.html) to run this example. You can initialize a virtual environment this way:
 
-    ```
+    ```bash
     pip install virtualenv
     virtualenv mytestenv
     cd mytestenv
@@ -31,13 +31,13 @@ urlFragment: network-python-manage-application-gateway
 
 3. Clone the repository.
 
-    ```
+    ```bash
     git clone https://github.com/Azure-Samples/network-python-manager-application-gateway.git
     ```
 
 4. Install the dependencies using pip.
 
-    ```
+    ```bash
     cd network-python-manager-application-gateway
     pip install -r requirements.txt
     ```
@@ -49,7 +49,7 @@ or [Azure Portal](http://azure.microsoft.com/documentation/articles/resource-gro
 
 6. Export these environment variables into your current shell.
 
-    ```
+    ```bash
     export AZURE_TENANT_ID={your tenant id}
     export AZURE_CLIENT_ID={your client id}
     export AZURE_CLIENT_SECRET={your client secret}
@@ -58,7 +58,7 @@ or [Azure Portal](http://azure.microsoft.com/documentation/articles/resource-gro
 
 7. Run the sample.
 
-    ```
+    ```bash
     python example.py
     ```
 
@@ -68,6 +68,6 @@ or [Azure Portal](http://azure.microsoft.com/documentation/articles/resource-gro
 - [Azure SDK for Python](http://github.com/Azure/azure-sdk-for-python)
 
 
-# Contributing
+## Contributing
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
